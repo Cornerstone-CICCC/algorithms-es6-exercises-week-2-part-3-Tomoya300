@@ -4,7 +4,10 @@
 // Test your function with different numbers of arguments.
 
 function subtract(...numbers) {
-  // Your code here
+  if (numbers.length === 0) {
+    return 0
+  }
+  return numbers.reduce((sum, now) => sum - now)
 }
 
-console.log(subtract(10, 2, 3)); // Example usage
+console.log(subtract(50, 4, 18, 9)); // Example usage
